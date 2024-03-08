@@ -18,7 +18,7 @@ const quantity = document.querySelector("#quantity");
 const myButton = document.querySelector("#checkbox1");
 
 
-// création de la variable qui permet de sélectionner une date d'anniversaire <= à la date du jour
+// création de la variable qui permet d'avoir la date, sans l'heure (AAAA-MM-JJTHH:MM:SS.MSZ)
 let today = new Date().toISOString().split("T")[0];
 
 let btnSubmitValidationForm = document.querySelector("#button");
@@ -348,6 +348,7 @@ radioTournoiList.forEach((radioTournoi) => {
 });
 
 menu_deroulant.addEventListener("click", openClosePageNavigation);
+// création de la variable qui permet de sélectionner une date d'anniversaire <= à la date du jour
 document.getElementsByName("birthdate")[0].setAttribute("max", today);
 
 // TO OPEN OR CLOSE THE FORM
